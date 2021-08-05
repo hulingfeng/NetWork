@@ -6,7 +6,7 @@ int UDPSocket::Bind(const SocketAddress& inToAddress)
 	int err = bind(mSocket, &inToAddress.GetSockAddr(), inToAddress.GetSize());
 	if (err != 0)
 	{
-		//SocketUtil::ReportError()
+		SocketUtil::ReportError("UDPSocket::Bind err =", err);
 	}
 	return err;
 }
